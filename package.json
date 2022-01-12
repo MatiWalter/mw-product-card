@@ -10,10 +10,16 @@
   "engines": {
     "node": ">=10"
   },
+  "repository": {
+    "url": "https://github.com/MatiWalter/mw-product-card",
+    "type": "git"
+  },
+  "homepage": "https://github.com/MatiWalter/mw-product-card",
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -52,12 +58,33 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "husky": "^7.0.4",
+    "identity-obj-proxy": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^7.0.5",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
-    "typescript": "^3.9.10"
+    "typescript": "^3.9.10",
+    "react-test-renderer": "^17.0.2",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "babel-jest": "^27.4.6",
+    "jest": "^25.5.4",
+    "@types/react-test-renderer": "^17.0.1"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "matias",
+    "walter"
+  ],
+  "dependencies": { 
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
